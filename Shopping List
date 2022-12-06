@@ -1,0 +1,58 @@
+//Credit to Anonymous from a google search. They did not leave their name.
+//Kirsten Jordan
+//COSC 1437
+//Dr.T
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+vector <string> shoppingList;
+
+bool timeForSorting(string s1, string s2)
+{
+  return s1>s2;
+}
+
+void sortTheList()
+{
+  std::sort(shoppingList.begin(), shoppingList.end(), timeForSorting);
+}
+
+void showList()
+{
+  for (auto it = shoppingList.begin(); it != shoppingList.end(); it++)
+    {
+      cout << *it <<""<<endl;
+    }
+  cout<< endl;
+}
+
+void itemsAddedToList()
+{
+  string item;
+  while (1)
+  {
+    cout<< "Please enter your grocery list item!"<<endl;
+    cout<< "When done, enter 'end'."<< endl;
+    cin>>item;
+    if (item == "end")
+    {
+      return;
+    }
+    shoppingList.push_back(item);
+  }
+}
+
+int main ()
+{
+  int i = 0;
+  itemsAddedToList();
+  cout << "The Sorted List: "<<endl;
+  showList();
+  sortTheList();
+  getchar();
+  return 0;
+}
