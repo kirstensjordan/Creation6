@@ -1,0 +1,25 @@
+//Create a for loop to list all the numbers from 1 to 100
+//anything that is divisible by 3 and 5 will be divisible by 15
+//use an if i is 15 then fizzbuzz
+//use an if else for both 3 then fizz and 5 then buzz
+//to clean up: that else will list all the other numbers as they are
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  for (int i = 1; i<=100; i++)
+    {
+    if((i%15)==0)
+      cout<<"FizzBuzz\n";
+    else if ((i%3)==0)
+      cout<<"Fizz\n";
+    else if ((i%5)==0)
+      cout<<"Buzz\n";
+    else 
+      cout<<i<<"\n";
+    }
+  return 0;
+}
+
+//Credit goes to websites like geeksforgeeks.org, github, makeuseof, and more as I learned the ((if i % number)==0) for my loops from these
